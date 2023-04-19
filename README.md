@@ -1,7 +1,7 @@
 # MyList Interface and Implementations
 This assignment involves creating an interface called MyList and implementing two classes, MyArrayList and MyLinkedList, which are implementations of the MyList interface in Java. The MyArrayList class is similar to the built-in ArrayList class in Java, while the MyLinkedList class is similar to the built-in LinkedList class, but without using any of the classes from the java.util package.
 
-## **MyList Interface**
+**MyList Interface**
 
 
 The MyList interface defines a basic list data structure with common list operations such as adding, removing, and accessing elements, as well as other list-related operations. The interface has the following methods:
