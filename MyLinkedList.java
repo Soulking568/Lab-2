@@ -99,6 +99,28 @@ public class MyLinkedList<T> implements mylist<T> {
         }
         return false;
     }
+    @Override
+    public T remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index out of range: " + index);
+        }
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+        if (current == head) {
+            head = current.next;
+        } else {
+            current.prev.next = current.next;
+        }
+        if (current == tail) {
+            tail = current.prev;
+        } else {
+            current.next.prev = current.prev;
+        }
+        size--;
+        return current.element;
+    }
 
 
 }
