@@ -176,6 +176,29 @@ public class MyLinkedList<T> implements mylist<T> {
         }
         return -1;
     }
+    @Override
+    public void sort() {
+        if (size > 1) {
+            boolean swapped;
+            do {
+                swapped = false;
+                Node current = head;
+                Node previous = null;
+                while (current != null && current.next != null) {
+                    if (((Comparable<T>) current.element).compareTo(current.next.element) > 0) {
+                        // Swap current and current.next elements
+                        T temp = current.element;
+                        current.element = current.next.element;
+                        current.next.element = temp;
+                        swapped = true;
+                    }
+                    previous = current;
+                    current = current.next;
+                }
+            } while (swapped);
+        }
+    }
+
 
 
 }
