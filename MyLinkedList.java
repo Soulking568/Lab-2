@@ -161,7 +161,21 @@ public class MyLinkedList<T> implements mylist<T> {
         }
         return -1;
     }
-
+    @Override
+    public int lastIndexOf(Object o) {
+        Node current = tail;
+        for (int i = size - 1; i >= 0; i--) {
+            if (o == null) {
+                if (current.element == null) {
+                    return i;
+                }
+            } else if (o.equals(current.element)) {
+                return i;
+            }
+            current = current.prev;
+        }
+        return -1;
+    }
 
 
 }
