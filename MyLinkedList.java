@@ -121,6 +121,12 @@ public class MyLinkedList<T> implements mylist<T> {
         size--;
         return current.element;
     }
+    @Override
+    public void clear() {
+        head = null;
+        tail = null;
+        size = 0;
+    }
 
 
 }
