@@ -146,6 +146,21 @@ public class MyLinkedList<T> implements mylist<T> {
         }
         return current.element;
     }
+    @Override
+    public int indexOf(Object o) {
+        Node current = head;
+        for (int i = 0; i < size; i++) {
+            if (o == null) {
+                if (current.element == null) {
+                    return i;
+                }
+            } else if (o.equals(current.element)) {
+                return i;
+            }
+            current = current.next;
+        }
+        return -1;
+    }
 
 
 
