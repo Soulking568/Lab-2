@@ -106,10 +106,14 @@ public class MyArrayList<T> implements mylist<T> {
         }
         return -1;
     }
-
     @Override
     public void sort() {
         Arrays.sort(elements, 0, size);
+    }
+    @Override
+    public void sort(String[] arr,int start_index, int end_index) {
+        System.arraycopy(elements, start_index, elements, end_index, size);
+        Arrays.stream(elements).sorted();
     }
 }
 

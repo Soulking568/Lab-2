@@ -21,7 +21,7 @@ public class Main {
         myList.sort();
         System.out.println("List after sorting: " + myList);
 
-        // Test MyArrayList class
+        //TODO Test MyArrayList class
         MyArrayList<String> myArrayList = new MyArrayList<>();
 
         myArrayList.add("apple");
@@ -41,5 +41,7 @@ public class Main {
 
         int size = myArrayList.size();
         System.out.println("Size of Array List: " + size);
+
+        myList.sort(myArrayList,1,2);
     }
 }

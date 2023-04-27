@@ -11,4 +11,5 @@ public interface mylist<T> {
     int indexOf(Object o);
     int lastIndexOf(Object o);
     void sort();
+    void sort(String[] arr,int start_index, int end_index);
 }
